@@ -14,7 +14,7 @@ func startCountdown(c):
 	if countdown > 0:
 		Timer.set_wait_time(1)
 		Timer.start()
-		text = "Starting in " + str(countdown)
+		text = "Collect the souls! Starting in " + str(countdown)
 
 
 func _on_Timer_timeout():

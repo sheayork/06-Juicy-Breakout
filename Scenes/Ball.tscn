@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Ball.gd" type="Script" id=1]
+[ext_resource path="res://Assets/rotating_orbs-1.0 by AntumDeluge/PNG/32x32/rotating_orb_blue.png" type="Texture" id=2]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -10,7 +11,6 @@ bounce = 1.0
 extents = Vector2( 8, 8 )
 
 [node name="Ball" type="RigidBody2D"]
-editor/display_folded = true
 position = Vector2( 544, 488 )
 mode = 2
 physics_material_override = SubResource( 1 )
@@ -23,11 +23,22 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.00012207, -0.00012207 )
+texture = ExtResource( 2 )
+
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -8.0
-margin_top = -8.0
-margin_right = 8.0
-margin_bottom = 8.0
+visible = false
+margin_left = -13.3033
+margin_top = -11.5356
+margin_right = 11.6967
+margin_bottom = 13.4644
+color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.530334, 0.530334 )
+scale = Vector2( 1.5, 1.5 )
 shape = SubResource( 2 )
