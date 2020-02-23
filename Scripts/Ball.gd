@@ -13,9 +13,12 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.is_in_group("Tiles"):
 			Game.change_score(body.points)
+			get_node("AudioStreamPlayer2D").playing = true
 			body.queue_free()
-	
-	if position.y > get_viewport().size.y:
-		Game.change_lives(-1)
-		Starting.startCountdown(3)
-		queue_free()
+		if body.is_in_group("Paddle/CollisionShape2D"):
+			get_node("AudioStreamPlayer2D").playing = true
+			body.queue_free()
+		if position.y > get_viewport().size.y:
+			Game.change_lives(-1)
+			Starting.startCountdown(3)
+			queue_free()

@@ -39,3 +39,16 @@ The grading criteria will be as follows:
  - [1] No (script) syntax errors
  - [1] No other runtime errors
  - [16] Features to make the game more "juicy"
+
+
+---
+
+ADDED FEATURES:
+* Changed the paddle
+* Changed the tiles
+* Changed the ball
+* Added background music
+* Added a background
+* Added sound effect to ball/tiles
+* Added sound affect to ball/paddle
+* Added particles to paddle

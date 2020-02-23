@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/kid-ghost-sigh.wav-112985bca68e2c3041dc550e142df08c.sample"
+
+[deps]
+
+source_file="res://Assets/kid-ghost-sigh.wav"
+dest_files=[ "res://.import/kid-ghost-sigh.wav-112985bca68e2c3041dc550e142df08c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
