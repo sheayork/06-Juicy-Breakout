@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Paddle.gd" type="Script" id=2]
@@ -9,31 +9,8 @@
 [ext_resource path="res://Assets/Angel by RedVoxel.png" type="Texture" id=7]
 [ext_resource path="res://Assets/azure-sky by treeform.jpg" type="Texture" id=8]
 [ext_resource path="res://Assets/Patakas-World by Davehouri/Patakas World.wav" type="AudioStream" id=9]
-[ext_resource path="res://Assets/star_08.png" type="Texture" id=10]
 
-[sub_resource type="ParticlesMaterial" id=2]
-emission_shape = 1
-emission_sphere_radius = 30.75
-flag_disable_z = true
-direction = Vector3( 0, 0, 0 )
-spread = 180.0
-flatness = 0.38
-gravity = Vector3( 0, 2000, 0 )
-initial_velocity = 288.06
-initial_velocity_random = 0.41
-angular_velocity = -49.66
-angular_velocity_random = 0.31
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-linear_accel = 100.0
-linear_accel_random = 0.17
-scale = 2.0
-scale_random = 1.0
-color = Color( 0.976471, 0.996078, 1, 1 )
-anim_speed = 45.61
-anim_speed_random = 0.52
-
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 47.5, 47.5 )
 
 [node name="Game" type="Node2D"]
@@ -64,13 +41,6 @@ current = true
 position = Vector2( 519, 530 )
 script = ExtResource( 2 )
 
-[node name="Particles2D" type="Particles2D" parent="Paddle"]
-position = Vector2( 0, 25 )
-scale = Vector2( 0.05, 0.05 )
-amount = 5
-process_material = SubResource( 2 )
-texture = ExtResource( 10 )
-
 [node name="ColorRect" type="ColorRect" parent="Paddle"]
 margin_left = -49.0
 margin_top = -49.0
@@ -86,13 +56,10 @@ position = Vector2( 49, 49 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 7 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Paddle/ColorRect"]
-position = Vector2( 49, 49 )
-scale = Vector2( 3, 3 )
-polygon = PoolVector2Array( 16, 5, 14.7, 5, 8.1, 9.9, 9.8, 15, 7.1, 15, 6.4, 16, -7, 16, -7, 15, -7.7, 11, -8.7, 11, -16, 4.8, -16, -1.6, -16, -2.2, -16, -16, 16, -16 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paddle"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
+
+[node name="Tween" type="Tween" parent="Paddle"]
 
 [node name="Wall" type="StaticBody2D" parent="."]
 
@@ -354,6 +321,7 @@ __meta__ = {
 wait_time = 10.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+visible = false
 stream = ExtResource( 9 )
 autoplay = true
 [connection signal="timeout" from="Starting/Timer" to="Starting" method="_on_Timer_timeout"]

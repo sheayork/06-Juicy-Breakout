@@ -31,3 +31,7 @@ shape = SubResource( 1 )
 position = Vector2( 0.707108, -2.12131 )
 scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Timer" type="Timer" parent="."]

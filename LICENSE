@@ -19,3 +19,17 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+Given the basics for this game, this is simple about an angel getting souls. This isn't to be religious, I just have an interest in angelology.
+I added the following:
+* Changed the paddle
+* Changed the tiles (also changed the amount of points (One soul = 1 point))
+* Changed the ball
+* Added background music
+* Added a background
+* Added sound effect to ball/tiles
+* Added particles to paddle
+* Added entrance tween for paddle and tiles
+* 
